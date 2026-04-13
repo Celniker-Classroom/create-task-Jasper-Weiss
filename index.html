@@ -1,13 +1,55 @@
+<!--
+PROJECT: College Major Finder
+
+DESCRIPTION:
+This program allows a user to enter an interest (such as math, design, or biology) 
+and find college majors related to that interest. The program searches through 
+a list of majors and their associated keywords and displays matches.
+
+FEATURES:
+- User inputs one interest
+- Program checks each major using a loop
+- Displays matching majors or a message if none are found
+
+COMPUTER SCIENCE CONCEPTS:
+- Lists: store major names and related keywords
+- Function: processes user input
+- Algorithm: searches for matching majors
+- Selection: uses if statements
+- Iteration: loops through majors
+
+GOAL:
+Help users explore college majors based on their interests.
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>College Major Finder</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Your html goes here...</h1>
-    <br>See the <a href="README.md">README</a> for project details
+    <h1>What Should I Study In College?</h1>
+    <h4> Background:</h4>
+    <p> College majors help guide your education and future career by focusing on subjects that match your interests. Choosing a major that aligns with what you enjoy can make learning more engaging and lead to more satisfying career paths!</p>
+    <h4> Subjects Inlucde: </h4>
+    <ul> 
+        <li> Math </li>
+        <li> Science </li>
+        <li> Technology </li>
+        <li> Creativity </li>
+        <li> Helping People </li>
+        <li> Problem Solving </li>
+        <li> Communication </li>
+        <li> Design </li>
+    </ul>
+    <h3> What is your strongest subject or interet? </h3>
+    <input type="text" id="interestInput" placeholder="Enter an Interest (e.g Math)">
+    <button onclick="findMajors()"> Search </button>
+    <p id="output"></p>
 </body>
 </html>
