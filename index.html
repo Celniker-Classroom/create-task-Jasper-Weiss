@@ -22,8 +22,6 @@ GOAL:
 Help users explore college majors based on their interests.
 -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,32 +30,195 @@ Help users explore college majors based on their interests.
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
     <h1>What Should I Study In College?</h1>
-    <h4> Background:</h4>
-    <p> College majors help guide your education and future career by focusing on subjects that match your interests. Choosing a major that aligns with what you enjoy can make learning more engaging and lead to more satisfying career paths!</p>
-    <h4> Subjects Inlucde: </h4>
-    <ul> 
-        <li> math </li>
-        <li> science </li>
-        <li> technology </li>
-        <li> creativity </li>
-        <li> helping people </li>
-        <li> problem solving </li>
-        <li> communication </li>
-        <li> business </li>
-        <li> design </li>
-        <li> research </li>
-        <li> ethics </li>
-        <li> innovation </li>
-        <li> society </li>
-        <li> environment </li>
-        <li> media </li>
-        <li> culture </li>
-    </ul>
-    <h3> What is your strongest subject or interet? </h3>
+    <h3> Background:</h3>
+    <p> College majors help guide your education and shape your future career by allowing you to focus on subjects that align with your interests and strengths. By choosing a major that reflects what you enjoy, you are more likely to stay motivated and engaged in your coursework. This not only makes the learning process more enjoyable, but also helps you develop deeper knowledge and valuable skills in a specific area. Over time, these skills can open up more opportunities and lead to a more fulfilling and satisfying career path.</p>
+    <h3> What is your strongest subject or interest? </h3>
     <input type="text" id="interestInput" placeholder="Enter an Interest (e.g Math)">
     <button id="searchButton">Search</button>
     <p id="output"></p>
-</body>
+    <body>
+
+        <!-- AI Usage for List: https://docs.google.com/document/d/1oHh4w8nZ0HzM3KfmAQcIRfFZDQrNLzSHxaht8lR191Q/edit?usp=sharing -->
+
+        <h2>Engineering and Technology</h2>
+
+        <div class="subject-list">
+            <span>Math</span>
+            <span>Problem Solving</span>
+            <span>Technology</span>
+            <span>Coding</span>
+            <span>Computers</span>
+            <span>Electronics</span>
+            <span>Circuits</span>
+            <span>Hardware</span>
+            <span>Software</span>
+            <span>Design</span>
+            <span>Physics</span>
+            <span>Machines</span>
+            <span>Building</span>
+            <span>Systems</span>
+            <span>Robotics</span>
+            <span>Web Design</span>
+            <span>Cybersecurity</span>
+            <span>Data</span>
+        </div>
+
+        <h2>Life Sciences and Health</h2>
+        <ul>
+        <li> Biology </li>
+        <li> Chemistry </li>
+        <li> Health </li>
+        <li> Medicine </li>
+        <li> Helping People </li>
+        <li> Lab Work </li>
+        <li> Research </li>
+        <li> Brain </li>
+        <li> Nutrition </li>
+        <li> Exercise </li>
+        <li> Fitness </li>
+        <li> Patients </li>
+        <li> Wellness </li>
+        <li> Disease </li>
+        <li> DNA </li>
+        </ul>
+
+        <h2>Physical and Environmental Sciences</h2>
+        <ul>
+        <li> Science </li>
+        <li> Physics </li>
+        <li> Chemistry </li>
+        <li> Environment </li>
+        <li> Nature </li>
+        <li> Sustainability </li>
+        <li> Climate </li>
+        <li> Ocean </li>
+        <li> Animals </li>
+        <li> Plants </li>
+        <li> Earth </li>
+        <li> Space </li>
+        <li> Stars </li>
+        <li> Field Work </li>
+        </ul>
+
+        <h2>Math and Analytics</h2>
+        <ul>
+        <li> Math </li>
+        <li> Statistics </li>
+        <li> Data </li>
+        <li> Analysis </li>
+        <li> Numbers </li>
+        <li> Logic </li>
+        <li> Patterns </li>
+        <li> Probability </li>
+        <li> Problem Solving </li>
+        <li> Models </li>
+        </ul>
+
+        <h2>Business and Leadership</h2>
+        <ul>
+        <li> Business </li>
+        <li> Leadership </li>
+        <li> Management </li>
+        <li> Money </li>
+        <li> Finance </li>
+        <li> Marketing </li>
+        <li> Sales </li>
+        <li> Entrepreneurship </li>
+        <li> Organization </li>
+        <li> Logistics </li>
+        <li> Planning </li>
+        <li> Efficiency </li>
+        <li> Investing </li>
+        <li> Branding </li>
+        </ul>
+
+        <h2>Social Sciences</h2>
+        <ul>
+        <li> Psychology </li>
+        <li> People </li>
+        <li> Behavior </li>
+        <li> Society </li>
+        <li> Culture </li>
+        <li> Community </li>
+        <li> Government </li>
+        <li> Politics </li>
+        <li> Law </li>
+        <li> Justice </li>
+        <li> Global Issues </li>
+        <li> Human Behavior </li>
+        <li> Social Issues </li>
+        </ul>
+
+        <h2>Humanities</h2>
+        <ul>
+        <li> Reading </li>
+        <li> Writing </li>
+        <li> Literature </li>
+        <li> History </li>
+        <li> Philosophy </li>
+        <li> Ethics </li>
+        <li> Debate </li>
+        <li> Language </li>
+        <li> Communication </li>
+        <li> Culture </li>
+        <li> Stories </li>
+        </ul>
+
+        <h2>Arts and Design</h2>
+        <ul>
+        <li> Art </li>
+        <li> Design </li>
+        <li> Creativity </li>
+        <li> Drawing </li>
+        <li> Painting </li>
+        <li> Visuals </li>
+        <li> Animation </li>
+        <li> Film </li>
+        <li> Storytelling </li>
+        <li> Music </li>
+        <li> Acting </li>
+        <li> Fashion </li>
+        <li> Architecture </li>
+        <li> Style </li>
+        </ul>
+
+        <h2>Education and Service</h2>
+        <ul>
+        <li> Teaching </li>
+        <li> Children </li>
+        <li> Helping People </li>
+        <li> Service </li>
+        <li> Patience </li>
+        <li> Support </li>
+        <li> Learning </li>
+        <li> Communication </li>
+        <li> Classroom </li>
+        </ul>
+
+        <h2>Media and Communication</h2>
+        <ul>
+        <li> Communication </li>
+        <li> Writing </li>
+        <li> Speaking </li>
+        <li> Media </li>
+        <li> Journalism </li>
+        <li> Public Relations </li>
+        <li> Advertising </li>
+        <li> Social Media </li>
+        <li> News </li>
+        <li> Interviews </li>
+        </ul>
+
+        <h2>Other Interests</h2>
+        <ul>
+        <li> Sports </li>
+        <li> Gaming </li>
+        <li> Food </li>
+        <li> Travel </li>
+        <li> Events </li>
+        <li> Service </li>
+        <li> Hospitality </li>
+        </ul>
+    </body>
 </html>
