@@ -112,43 +112,48 @@ const majors = [
   { name: "Fashion Design", keywords: ["fashion", "design", "art", "creativity", "style", "drawing", "visuals", "branding"] }
 ];
 
-function cleanInput(text) {
-    return text.trim().toLowerCase();
-}
+function searchMajors(selectedSubjects, majorList) {
+  let results = [];
 
-function clearInput() {
-    document.getElementById("interestInput").value = "";
-}
-
-function searchMajors(input, majorList) {
-    let results = []
-    for (let i = 0; i < majorList.length; i++) {
-        if (majorList[i].keywords.includes(input)) {
-            results.push(majorList[i].name);
-        }
+  for (let i = 0; i < majorList.length; i++) {
+    for (let j = 0; j < selectedSubjects.length; j++) {
+      if (majorList[i].keywords.includes(selectedSubjects[j])) {
+        results.push(majorList[i].name);
+        break;
+      }
     }
-    return results;
+  }
+
+  return results;
 }
 
-function getMatchingMajors(userInput) {
-  let cleanedInput = cleanInput(userInput);
-  return searchMajors(cleanedInput, majors);
-}
+const chips = document.querySelectorAll(".chip");
+const output = document.getElementById("output");
+const submitBtn = document.getElementById("submitBtn");
 
-// Test 1: input = "ethics" → expected: Bioethics, Human Rights, Criminal Justice
-// Test 2: input = "media" → expected: Photojournalism, Social Media Management
+chips.forEach(function (chip) {
+  chip.addEventListener("click", function () {
+    chip.classList.toggle("active");
+  });
+});
 
-document.getElementById("searchButton").addEventListener("click", function () {
-  let rawInput = document.getElementById("interestInput").value;
-  let results = getMatchingMajors(rawInput);
+submitBtn.addEventListener("click", function () {
+  let selectedSubjects = [];
 
-  let output = document.getElementById("output");
+  document.querySelectorAll(".chip.active").forEach(function (chip) {
+    selectedSubjects.push(chip.textContent.toLowerCase());
+  });
+
+  if (selectedSubjects.length === 0) {
+    output.textContent = "Please select at least one interest.";
+    return;
+  }
+
+  let results = searchMajors(selectedSubjects, majors);
 
   if (results.length > 0) {
-        output.textContent = "Matching Majors: " + results.join(", ");
-    } else { 
-        output.textContent = "Invalid Input, pick an interest from the list!";
-    }
-
-clearInput();
+    output.textContent = "Matching Majors: " + results.join(", ");
+  } else {
+    output.textContent = "No matching majors found.";
+  }
 });

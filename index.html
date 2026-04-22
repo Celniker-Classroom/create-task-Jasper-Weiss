@@ -31,194 +31,202 @@ Help users explore college majors based on their interests.
     <link rel="stylesheet" href="styles.css">
 </head>
     <h1>What Should I Study In College?</h1>
-    <h3> Background:</h3>
-    <p> College majors help guide your education and shape your future career by allowing you to focus on subjects that align with your interests and strengths. By choosing a major that reflects what you enjoy, you are more likely to stay motivated and engaged in your coursework. This not only makes the learning process more enjoyable, but also helps you develop deeper knowledge and valuable skills in a specific area. Over time, these skills can open up more opportunities and lead to a more fulfilling and satisfying career path.</p>
-    <h3> What is your strongest subject or interest? </h3>
-    <input type="text" id="interestInput" placeholder="Enter an Interest (e.g Math)">
-    <button id="searchButton">Search</button>
-    <p id="output"></p>
+    <h3> Take a Quick Survey! </h3>
+    <p> Click on the following subjects that interest you from the different subject lists and at the end hit sumbit to find the majors that best fit you.</p>
     <body>
 
         <!-- AI Usage for List: https://docs.google.com/document/d/1oHh4w8nZ0HzM3KfmAQcIRfFZDQrNLzSHxaht8lR191Q/edit?usp=sharing -->
 
-        <h2>Engineering and Technology</h2>
+       <h2>Engineering and Technology</h2>
 
-        <div class="subject-list">
-            <span>Math</span>
-            <span>Problem Solving</span>
-            <span>Technology</span>
-            <span>Coding</span>
-            <span>Computers</span>
-            <span>Electronics</span>
-            <span>Circuits</span>
-            <span>Hardware</span>
-            <span>Software</span>
-            <span>Design</span>
-            <span>Physics</span>
-            <span>Machines</span>
-            <span>Building</span>
-            <span>Systems</span>
-            <span>Robotics</span>
-            <span>Web Design</span>
-            <span>Cybersecurity</span>
-            <span>Data</span>
-        </div>
+       <div class="subject-list">
+           <span class = "chip">Math</span>
+           <span class="chip">Problem Solving</span>
+           <span class="chip">Technology</span>
+           <span class="chip">Coding</span>
+           <span class="chip">Computers</span>
+           <span class="chip">Electronics</span>
+           <span class="chip">Circuits</span>
+           <span class="chip">Hardware</span>
+           <span class="chip">Software</span>
+           <span class="chip">Design</span>
+           <span class="chip">Physics</span>
+           <span class="chip">Machines</span>
+           <span class="chip">Building</span>
+           <span class="chip">Systems</span>
+           <span class="chip">Robotics</span>
+           <span class="chip">Web Design</span>
+           <span class="chip">Cybersecurity</span>
+           <span class="chip">Data</span>
+       </div>
 
-        <h2>Life Sciences and Health</h2>
-        <ul>
-        <li> Biology </li>
-        <li> Chemistry </li>
-        <li> Health </li>
-        <li> Medicine </li>
-        <li> Helping People </li>
-        <li> Lab Work </li>
-        <li> Research </li>
-        <li> Brain </li>
-        <li> Nutrition </li>
-        <li> Exercise </li>
-        <li> Fitness </li>
-        <li> Patients </li>
-        <li> Wellness </li>
-        <li> Disease </li>
-        <li> DNA </li>
-        </ul>
+       <h2>Life Sciences and Health</h2>
 
-        <h2>Physical and Environmental Sciences</h2>
-        <ul>
-        <li> Science </li>
-        <li> Physics </li>
-        <li> Chemistry </li>
-        <li> Environment </li>
-        <li> Nature </li>
-        <li> Sustainability </li>
-        <li> Climate </li>
-        <li> Ocean </li>
-        <li> Animals </li>
-        <li> Plants </li>
-        <li> Earth </li>
-        <li> Space </li>
-        <li> Stars </li>
-        <li> Field Work </li>
-        </ul>
+       <div class="subject-list">
+          <span class="chip">Biology</span>
+          <span class="chip">Chemistry</span>
+          <span class="chip">Health</span>
+          <span class="chip">Medicine</span>
+          <span class="chip">Helping People</span>
+          <span class="chip">Lab Work</span>
+          <span class="chip">Research</span>
+          <span class="chip">Brain</span>
+          <span class="chip">Nutrition</span>
+          <span class="chip">Exercise</span>
+          <span class="chip">Fitness</span>
+          <span class="chip">Patients</span>
+          <span class="chip">Wellness</span>
+          <span class="chip">Disease</span>
+          <span class="chip">DNA</span>
+       </div>
 
-        <h2>Math and Analytics</h2>
-        <ul>
-        <li> Math </li>
-        <li> Statistics </li>
-        <li> Data </li>
-        <li> Analysis </li>
-        <li> Numbers </li>
-        <li> Logic </li>
-        <li> Patterns </li>
-        <li> Probability </li>
-        <li> Problem Solving </li>
-        <li> Models </li>
-        </ul>
+       <h2>Physical and Environmental Sciences</h2>
 
-        <h2>Business and Leadership</h2>
-        <ul>
-        <li> Business </li>
-        <li> Leadership </li>
-        <li> Management </li>
-        <li> Money </li>
-        <li> Finance </li>
-        <li> Marketing </li>
-        <li> Sales </li>
-        <li> Entrepreneurship </li>
-        <li> Organization </li>
-        <li> Logistics </li>
-        <li> Planning </li>
-        <li> Efficiency </li>
-        <li> Investing </li>
-        <li> Branding </li>
-        </ul>
+       <div class="subject-list">
+          <span class="chip">Science</span>
+          <span class="chip">Physics</span>
+          <span class="chip">Chemistry</span>
+          <span class="chip">Environment</span>
+          <span class="chip">Nature</span>
+          <span class="chip">Sustainability</span>
+          <span class="chip">Climate</span>
+          <span class="chip">Ocean</span>
+          <span class="chip">Animals</span>
+          <span class="chip">Plants</span>
+          <span class="chip">Earth</span>
+          <span class="chip">Space</span>
+          <span class="chip">Stars</span>
+          <span class="chip">Field Work</span>
+       </div>
 
-        <h2>Social Sciences</h2>
-        <ul>
-        <li> Psychology </li>
-        <li> People </li>
-        <li> Behavior </li>
-        <li> Society </li>
-        <li> Culture </li>
-        <li> Community </li>
-        <li> Government </li>
-        <li> Politics </li>
-        <li> Law </li>
-        <li> Justice </li>
-        <li> Global Issues </li>
-        <li> Human Behavior </li>
-        <li> Social Issues </li>
-        </ul>
+       <h2>Math and Analytics</h2>
 
-        <h2>Humanities</h2>
-        <ul>
-        <li> Reading </li>
-        <li> Writing </li>
-        <li> Literature </li>
-        <li> History </li>
-        <li> Philosophy </li>
-        <li> Ethics </li>
-        <li> Debate </li>
-        <li> Language </li>
-        <li> Communication </li>
-        <li> Culture </li>
-        <li> Stories </li>
-        </ul>
+       <div class="subject-list">
+           <span class="chip">Math</span>
+           <span class="chip">Statistics</span>
+           <span class="chip">Data</span>
+           <span class="chip">Analysis</span>
+           <span class="chip">Numbers</span>
+           <span class="chip">Logic</span>
+           <span class="chip">Patterns</span>
+           <span class="chip">Probability</span>
+           <span class="chip">Problem Solving</span>
+           <span class="chip">Models</span>
+       </div>
 
-        <h2>Arts and Design</h2>
-        <ul>
-        <li> Art </li>
-        <li> Design </li>
-        <li> Creativity </li>
-        <li> Drawing </li>
-        <li> Painting </li>
-        <li> Visuals </li>
-        <li> Animation </li>
-        <li> Film </li>
-        <li> Storytelling </li>
-        <li> Music </li>
-        <li> Acting </li>
-        <li> Fashion </li>
-        <li> Architecture </li>
-        <li> Style </li>
-        </ul>
+       <h2>Business and Leadership</h2>
 
-        <h2>Education and Service</h2>
-        <ul>
-        <li> Teaching </li>
-        <li> Children </li>
-        <li> Helping People </li>
-        <li> Service </li>
-        <li> Patience </li>
-        <li> Support </li>
-        <li> Learning </li>
-        <li> Communication </li>
-        <li> Classroom </li>
-        </ul>
+       <div class="subject-list">
+           <span class="chip">Business</span>
+           <span class="chip">Leadership</span>
+           <span class="chip">Management</span>
+           <span class="chip">Money</span>
+           <span class="chip">Finance</span>
+           <span class="chip">Marketing</span>
+           <span class="chip">Sales</span>
+           <span class="chip">Entrepreneurship</span>
+           <span class="chip">Organization</span>
+           <span class="chip">Logistics</span>
+           <span class="chip">Planning</span>
+           <span class="chip">Efficiency</span>
+           <span class="chip">Investing</span>
+           <span class="chip">Branding</span>
+       </div>
 
-        <h2>Media and Communication</h2>
-        <ul>
-        <li> Communication </li>
-        <li> Writing </li>
-        <li> Speaking </li>
-        <li> Media </li>
-        <li> Journalism </li>
-        <li> Public Relations </li>
-        <li> Advertising </li>
-        <li> Social Media </li>
-        <li> News </li>
-        <li> Interviews </li>
-        </ul>
+       <h2>Social Sciences</h2>
 
-        <h2>Other Interests</h2>
-        <ul>
-        <li> Sports </li>
-        <li> Gaming </li>
-        <li> Food </li>
-        <li> Travel </li>
-        <li> Events </li>
-        <li> Service </li>
-        <li> Hospitality </li>
-        </ul>
+       <div class="subject-list">
+           <span class="chip">Psychology</span>
+           <span class="chip">People</span>
+           <span class="chip">Behavior</span>
+           <span class="chip">Society</span>
+           <span class="chip">Culture</span>
+           <span class="chip">Community</span>
+           <span class="chip">Government</span>
+           <span class="chip">Politics</span>
+           <span class="chip">Law</span>
+           <span class="chip">Justice</span>
+           <span class="chip">Global Issues</span>
+           <span class="chip">Human Behavior</span>
+           <span class="chip">Social Issues</span>
+       </div>
+
+       <h2>Humanities</h2>
+
+       <div class="subject-list">
+           <span class="chip">Reading</span>
+           <span class="chip">Writing</span>
+           <span class="chip">Literature</span>
+           <span class="chip">History</span>
+           <span class="chip">Philosophy</span>
+           <span class="chip">Ethics</span>
+           <span class="chip">Debate</span>
+           <span class="chip">Language</span>
+           <span class="chip">Communication</span>
+           <span class="chip">Culture</span>
+           <span class="chip">Stories</span>
+       </div>
+
+       <h2>Arts and Design</h2>
+
+       <div class="subject-list">
+           <span class="chip">Art</span>
+           <span class="chip">Design</span>
+           <span class="chip">Creativity</span>
+           <span class="chip">Drawing</span>
+           <span class="chip">Painting</span>
+           <span class="chip">Visuals</span>
+           <span class="chip">Animation</span>
+           <span class="chip">Film</span>
+           <span class="chip">Storytelling</span>
+           <span class="chip">Music</span>
+           <span class="chip">Acting</span>
+           <span class="chip">Fashion</span>
+           <span class="chip">Architecture</span>
+           <span class="chip">Style</span>
+       </div>
+
+       <h2>Education and Service</h2>
+
+       <div class="subject-list">
+           <span class="chip">Teaching</span>
+           <span class="chip">Children</span>
+           <span class="chip">Helping People</span>
+           <span class="chip">Service</span>
+           <span class="chip">Patience</span>
+           <span class="chip">Support</span>
+           <span class="chip">Learning</span>
+           <span class="chip">Communication</span>
+           <span class="chip">Classroom</span>
+       </div>
+
+       <h2>Media and Communication</h2>
+    
+       <div class="subject-list">
+           <span class="chip">Communication</span>
+           <span class="chip">Writing</span>
+           <span class="chip">Speaking</span>
+           <span class="chip">Media</span>
+           <span class="chip">Journalism</span>
+           <span class="chip">Public Relations</span>
+           <span class="chip">Advertising</span>
+           <span class="chip">Social Media</span>
+           <span class="chip">News</span>
+           <span class="chip">Interviews</span>
+       </div>
+
+       <h2>Other Interests</h2>
+
+       <div class="subject-list">
+           <span class="chip">Sports</span>
+           <span class="chip">Gaming</span>
+           <span class="chip">Food</span>
+           <span class="chip">Travel</span>
+           <span class="chip">Events</span>
+           <span class="chip">Service</span>
+           <span class="chip">Hospitality</span>
+       </div>
     </body>
+    <button id="submitBtn">Find My Major</button>
+    <p id="output"></p>
 </html>
