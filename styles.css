@@ -40,7 +40,8 @@ body{
     font: times new roman;
     width: fit-content;
     margin: 0 auto;
-    line-height: 1.5;}
+    line-height: 1.5;
+    margin-bottom: 80px;}
 
 .subject-list span {
     background-color: rgb(1, 1, 34);
@@ -68,4 +69,11 @@ body{
     background-color: rgb(255, 255, 255);
     color: black;
     border-color: rgb(255, 255, 255);
+}
+
+.subject-list {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 8px;      
 }

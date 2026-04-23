@@ -112,17 +112,41 @@ const majors = [
   { name: "Fashion Design", keywords: ["fashion", "design", "art", "creativity", "style", "drawing", "visuals", "branding"] }
 ];
 
+const clearBtn = document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click", function () {
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.classList.remove("active");
+  });
+
+  output.textContent = "";
+  showMoreBtn.style.display = "none";
+  extraResults = [];
+});
+
 function searchMajors(selectedSubjects, majorList) {
   let results = [];
 
   for (let i = 0; i < majorList.length; i++) {
+    let matchCount = 0;
+
     for (let j = 0; j < selectedSubjects.length; j++) {
       if (majorList[i].keywords.includes(selectedSubjects[j])) {
-        results.push(majorList[i].name);
-        break;
+        matchCount++;
       }
     }
+
+    if (matchCount > 0) {
+      results.push({
+        name: majorList[i].name,
+        matches: matchCount
+      });
+    }
   }
+
+  results.sort(function (a, b) {
+    return b.matches - a.matches;
+  });
 
   return results;
 }
@@ -130,6 +154,9 @@ function searchMajors(selectedSubjects, majorList) {
 const chips = document.querySelectorAll(".chip");
 const output = document.getElementById("output");
 const submitBtn = document.getElementById("submitBtn");
+const showMoreBtn = document.getElementById("showMoreBtn");
+
+let extraResults = [];
 
 chips.forEach(function (chip) {
   chip.addEventListener("click", function () {
@@ -146,14 +173,40 @@ submitBtn.addEventListener("click", function () {
 
   if (selectedSubjects.length === 0) {
     output.textContent = "Please select at least one interest.";
+    showMoreBtn.style.display = "none";
+    extraResults = [];
     return;
   }
 
   let results = searchMajors(selectedSubjects, majors);
 
   if (results.length > 0) {
-    output.textContent = "Matching Majors: " + results.join(", ");
+    let topFive = results.slice(0, 5);
+    extraResults = results.slice(5);
+
+    let topFiveNames = topFive.map(function (major) {
+      return major.name;
+    });
+
+    output.textContent = "Top Matches: " + topFiveNames.join(", ");
+
+    if (extraResults.length > 0) {
+      showMoreBtn.style.display = "inline-block";
+    } else {
+      showMoreBtn.style.display = "none";
+    }
   } else {
     output.textContent = "No matching majors found.";
+    showMoreBtn.style.display = "none";
+    extraResults = [];
   }
+});
+
+showMoreBtn.addEventListener("click", function () {
+  let extraNames = extraResults.map(function (major) {
+    return major.name;
+  });
+
+  output.textContent += " | More Matches: " + extraNames.join(", ");
+  showMoreBtn.style.display = "none";
 });
