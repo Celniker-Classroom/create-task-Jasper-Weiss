@@ -112,9 +112,13 @@ const majors = [
   { name: "Fashion Design", keywords: ["fashion", "design", "art", "creativity", "style", "drawing", "visuals", "branding"] }
 ];
 
+// Removes the "active" selection from all chips
+// clears any displayed results text
+// Resets the extra results 
+
 const clearBtn = document.getElementById("clearBtn");
 
-clearBtn.addEventListener("click", function () {
+clearBtn.addEventListener("click", function () {                      
   document.querySelectorAll(".chip").forEach(function (chip) {
     chip.classList.remove("active");
   });
@@ -123,6 +127,10 @@ clearBtn.addEventListener("click", function () {
   showMoreBtn.style.display = "none";
   extraResults = [];
 });
+
+// Searches through all majors and checks how many of the user's selected subjects match
+// If a major has at least one match, it gets added to a results list with the number of matches
+// Results are sorted so the majors with the most matches come first
 
 function searchMajors(selectedSubjects, majorList) {
   let results = [];
@@ -158,6 +166,8 @@ const showMoreBtn = document.getElementById("showMoreBtn");
 
 let extraResults = [];
 
+// Toggle function for chips
+
 chips.forEach(function (chip) {
   chip.addEventListener("click", function () {
     chip.classList.toggle("active");
@@ -167,9 +177,13 @@ chips.forEach(function (chip) {
 submitBtn.addEventListener("click", function () {
   let selectedSubjects = [];
 
+//lowercase to match keywords
+
   document.querySelectorAll(".chip.active").forEach(function (chip) {
     selectedSubjects.push(chip.textContent.toLowerCase());
   });
+
+//If no keywords selected, asks user to select a chip and hides show more button
 
   if (selectedSubjects.length === 0) {
     output.textContent = "Please select at least one interest.";
@@ -177,6 +191,9 @@ submitBtn.addEventListener("click", function () {
     extraResults = [];
     return;
   }
+
+//Search function call
+//Top 5 matches displayed
 
   let results = searchMajors(selectedSubjects, majors);
 
@@ -190,17 +207,24 @@ submitBtn.addEventListener("click", function () {
 
     output.textContent = "Top Matches: " + topFiveNames.join(", ");
 
+//Hides show more if less than 5 possible majors
+
     if (extraResults.length > 0) {
       showMoreBtn.style.display = "inline-block";
     } else {
       showMoreBtn.style.display = "none";
     }
+
+//If selected keywords dont match any majors
+
   } else {
     output.textContent = "No matching majors found.";
     showMoreBtn.style.display = "none";
     extraResults = [];
   }
 });
+
+//Adds show more button if more, less related majors are matched
 
 showMoreBtn.addEventListener("click", function () {
   let extraNames = extraResults.map(function (major) {
